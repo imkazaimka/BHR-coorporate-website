@@ -1,0 +1,27 @@
+<!-- standarts.html -->
+{% extends "base.html" %}
+
+{% block title %}Certifications - Textile Mill Company{% endblock %}
+
+{% block content %}
+<section class="certifications">
+    <h2>Our Certifications & Commitments</h2>
+    <div class="certifications-list">
+        <div class="cert">
+            <img src="{{ url_for('static', filename='certificates/gots.png') }}" alt="GOTS Certificate">
+            <h3>GOTS Certification</h3>
+            <p>Ensuring organic and sustainable textile production.</p>
+        </div>
+        <div class="cert">
+            <img src="{{ url_for('static', filename='certificates/fairtrade.png') }}" alt="Fairtrade Certificate">
+            <h3>Fairtrade Certification</h3>
+            <p>Committed to fair wages and ethical working conditions.</p>
+        </div>
+        <div class="cert">
+            <img src="{{ url_for('static', filename='certificates/iso9001.png') }}" alt="ISO Certificate">
+            <h3>ISO 9001 Quality Standard</h3>
+            <p>International standards of operational excellence and quality assurance.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

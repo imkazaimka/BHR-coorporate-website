@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Textile Mill Company{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="overlay">
+        <h1>Leading Yarn Spinning Experts</h1>
+        <p>Innovative textile solutions crafted with responsibility and integrity</p>
+        <a href="{{ url_for('products') }}" class="btn">Explore Products</a>
+    </div>
+    <video autoplay muted loop>
+        <source src="{{ url_for('static', filename='videos/spinning_process.mp4') }}" type="video/mp4">
+    </video>
+</header>
+
+<!-- Featured Products with Icons -->
+<section class="featured-products">
+    <h2>Our Premium Yarns</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="{{ url_for('static', filename='icons/cotton-icon.svg') }}" alt="Cotton Icon">
+            <h3>Pure Cotton Yarn</h3>
+            <img src="{{ url_for('static', filename='images/cotton.jpg') }}" alt="Cotton Yarn">
+            <p>Premium, eco-friendly cotton yarn perfect for apparel and home textiles.</p>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='icons/polyester-icon.svg') }}" alt="Polyester Icon">
+            <h3>Polyester Yarn</h3>
+            <img src="{{ url_for('static', filename='images/polyester.jpg') }}" alt="Polyester Yarn">
+            <p>Robust, versatile polyester yarn suitable for various industrial applications.</p>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='icons/blended-icon.svg') }}" alt="Blended Icon">
+            <h3>Blended Yarns</h3>
+            <img src="{{ url_for('static', filename='images/blended.jpg') }}" alt="Blended Yarn">
+            <p>High-performance yarns combining natural and synthetic fibers.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Transparency & Certification with Icons -->
+<section class="certifications">
+    <h2>Ethics & Sustainability</h2>
+    <p>Our commitment to sustainability and ethical practices is recognized worldwide.</p>
+    <div class="certifications-grid">
+        <div class="cert-item">
+            <img src="{{ url_for('static', filename='icons/gots-icon.svg') }}" alt="GOTS Icon">
+            <p>GOTS Certified</p>
+        </div>
+        <div class="cert-item">
+            <img src="{{ url_for('static', filename='icons/fairtrade-icon.svg') }}" alt="Fairtrade Icon">
+            <p>Fairtrade Certified</p>
+        </div>
+        <div class="cert-item">
+            <img src="{{ url_for('static', filename='icons/iso-icon.svg') }}" alt="ISO Icon">
+            <p>ISO 9001 Quality</p>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Factory Tour Section -->
+<section class="video-tour">
+    <h2>Explore Our Textile Mill</h2>
+    <video controls>
+        <source src="{{ url_for('static', filename='videos/factory_tour.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<!-- Client Testimonials Section with Quotes -->
+<section class="testimonials">
+    <h2>Trusted by Global Brands</h2>
+    <div class="testimonial-grid">
+        <blockquote>
+            <img src="{{ url_for('static', filename='icons/quote.svg') }}" alt="Quote Icon">
+            <p>"Impressive ethical standards and product quality. Our go-to partner for sustainable yarn solutions."</p>
+            <footer>— Emma Johnson, Sustainability Lead, Global Apparel Co.</footer>
+        </blockquote>
+        <blockquote>
+            <img src="{{ url_for('static', filename='icons/quote.svg') }}" alt="Quote Icon">
+            <p>"Transparent, reliable, and consistently exceeding expectations. A truly outstanding textile supplier."</p>
+            <footer>— David Lee, Procurement Manager, International Textiles Ltd.</footer>
+        </blockquote>
+    </div>
+</section>
+
+{% endblock %}
+```
+

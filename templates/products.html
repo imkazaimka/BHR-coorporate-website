@@ -1,0 +1,27 @@
+<!-- products.html -->
+{% extends "base.html" %}
+
+{% block title %}Our Products - Textile Mill Company{% endblock %}
+
+{% block content %}
+<section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/cotton.jpg') }}" alt="Cotton Yarn">
+            <h3>Cotton Yarn</h3>
+            <p>High-quality, eco-friendly cotton yarn available in various specifications.</p>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/polyester.jpg') }}" alt="Polyester Yarn">
+            <h3>Polyester Yarn</h3>
+            <p>Durable and versatile polyester yarn suitable for industrial uses.</p>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/blended.jpg') }}" alt="Blended Yarn">
+            <h3>Blended Yarns</h3>
+            <p>Perfect blend of natural and synthetic fibers for optimal performance.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
