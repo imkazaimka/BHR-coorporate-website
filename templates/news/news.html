@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}News - Textile Mill Company{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4">Latest News & Updates</h2>
+        {% for post in posts %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3>{{ post.title }}</h3>
+                <p class="text-muted"><small>{{ post.date_posted.strftime('%B %d, %Y') }}</small></p>
+                <p>{{ post.content[:150] }}{{ '...' if post.content|length > 150 else '' }}</p>
+                <a href="{{ url_for('news_post', post_id=post.id) }}" class="btn btn-outline-primary btn-sm">Read More</a>
+            </div>
+        </div>
+        {% else %}
+            <p>No news posts available.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

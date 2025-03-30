@@ -1,0 +1,35 @@
+<!-- new_post.html -->
+{% extends "base.html" %}
+
+{% block title %}New Post - Admin{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2>Add New Post</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.title(class="form-control", placeholder="News Title") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.content(class="form-control", placeholder="Content", rows=8) }}
+        </div>
+
+        <div class="mb-3">
+            <label for="photos">Upload Photos (up to 6)</label>
+            <input type="file" name="photos" multiple class="form-control">
+        </div>
+
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
+        {% endfor %}
+    {% endwith %}
+
+</div>

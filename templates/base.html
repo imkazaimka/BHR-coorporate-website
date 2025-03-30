@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>{{ title if title else "Textile Mill Company" }}</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Textile Mill Company{% endblock %}</title>
+    <!-- Corrected Bootstrap CSS CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-UgBepM0LrqE7hrTf6sEXtGgmbcH6Lk7a3u57xg3t+bKcNJdojF9E1uMCg1ZKf7Sk" 
+          crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+  </head>
+  <body>
 
-  {% include 'components/navbar.html' %}
+    {% include 'components/navbar.html' %}
 
-  {% block content %}{% endblock %}
+    <main class="container my-4">
+      {% block content %}{% endblock %}
+    </main>
 
-  {% include 'components/footer.html' %}
+    {% include 'components/footer.html' %}
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-cTfQKdAh/gGllVCaBbybGltgT8qE+UJ6uoeP6v0z+5Aq/Xlf0TWHDURs3jLG/N7s" 
+            crossorigin="anonymous"></script>
+  </body>
 </html>

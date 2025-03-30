@@ -1,3 +1,4 @@
+<!-- home.html -->
 {% extends "base.html" %}
 
 {% block title %}Home - Textile Mill Company{% endblock %}
@@ -5,88 +6,95 @@
 {% block content %}
 
 <!-- Hero Section -->
-<header class="hero">
-    <div class="overlay">
-        <h1>Leading Yarn Spinning Experts</h1>
-        <p>Innovative textile solutions crafted with responsibility and integrity</p>
-        <a href="{{ url_for('products') }}" class="btn">Explore Products</a>
+<header class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h1 class="display-4">Leading Yarn Spinning Experts</h1>
+        <p class="lead">Innovative textile solutions crafted with responsibility and integrity</p>
+        <a href="{{ url_for('products') }}" class="btn btn-primary btn-lg">Explore Products</a>
     </div>
-    <video autoplay muted loop>
-        <source src="{{ url_for('static', filename='videos/spinning_process.mp4') }}" type="video/mp4">
-    </video>
 </header>
 
-<!-- Featured Products with Icons -->
-<section class="featured-products">
-    <h2>Our Premium Yarns</h2>
-    <div class="product-grid">
-        <div class="product">
-            <img src="{{ url_for('static', filename='icons/cotton-icon.svg') }}" alt="Cotton Icon">
-            <h3>Pure Cotton Yarn</h3>
-            <img src="{{ url_for('static', filename='images/cotton.jpg') }}" alt="Cotton Yarn">
-            <p>Premium, eco-friendly cotton yarn perfect for apparel and home textiles.</p>
-        </div>
-        <div class="product">
-            <img src="{{ url_for('static', filename='icons/polyester-icon.svg') }}" alt="Polyester Icon">
-            <h3>Polyester Yarn</h3>
-            <img src="{{ url_for('static', filename='images/polyester.jpg') }}" alt="Polyester Yarn">
-            <p>Robust, versatile polyester yarn suitable for various industrial applications.</p>
-        </div>
-        <div class="product">
-            <img src="{{ url_for('static', filename='icons/blended-icon.svg') }}" alt="Blended Icon">
-            <h3>Blended Yarns</h3>
-            <img src="{{ url_for('static', filename='images/blended.jpg') }}" alt="Blended Yarn">
-            <p>High-performance yarns combining natural and synthetic fibers.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Transparency & Certification with Icons -->
-<section class="certifications">
-    <h2>Ethics & Sustainability</h2>
-    <p>Our commitment to sustainability and ethical practices is recognized worldwide.</p>
-    <div class="certifications-grid">
-        <div class="cert-item">
-            <img src="{{ url_for('static', filename='icons/gots-icon.svg') }}" alt="GOTS Icon">
-            <p>GOTS Certified</p>
-        </div>
-        <div class="cert-item">
-            <img src="{{ url_for('static', filename='icons/fairtrade-icon.svg') }}" alt="Fairtrade Icon">
-            <p>Fairtrade Certified</p>
-        </div>
-        <div class="cert-item">
-            <img src="{{ url_for('static', filename='icons/iso-icon.svg') }}" alt="ISO Icon">
-            <p>ISO 9001 Quality</p>
+<!-- Featured Products -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Premium Yarns</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="{{ url_for('static', filename='icons/cotton-icon.svg') }}" alt="Cotton Icon" width="60">
+                <h3>Pure Cotton Yarn</h3>
+                <img src="{{ url_for('static', filename='images/cotton.jpg') }}" class="img-fluid rounded my-2">
+                <p>Premium, eco-friendly cotton yarn perfect for apparel and home textiles.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/polyester-icon.svg') }}" alt="Polyester Icon" width="50">
+                <h3>Polyester Yarn</h3>
+                <img src="{{ url_for('static', filename='images/polyester.jpg') }}" class="img-fluid rounded my-2">
+                <p>Robust, versatile polyester yarn suitable for various industrial applications.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/blended-icon.svg') }}" alt="Blended Icon">
+                <h3>Blended Yarns</h3>
+                <img src="{{ url_for('static', filename='images/blended.jpg') }}" class="img-fluid rounded my-2">
+                <p>High-performance yarns combining natural and synthetic fibers.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Interactive Factory Tour Section -->
-<section class="video-tour">
-    <h2>Explore Our Textile Mill</h2>
-    <video controls>
-        <source src="{{ url_for('static', filename='videos/factory_tour.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<!-- Certifications -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Ethics & Sustainability</h2>
+        <p class="mb-5">Our commitment to sustainability and ethical practices is recognized worldwide.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <img src="{{ url_for('static', filename='icons/gots-icon.svg') }}" width="50" alt="GOTS Icon">
+                <p>GOTS Certified</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/fairtrade-icon.svg') }}" width="50" alt="Fairtrade Icon">
+                <p>Fairtrade Certified</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/iso-icon.svg') }}" width="50" alt="ISO Icon">
+                <p>ISO 9001 Quality</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Client Testimonials Section with Quotes -->
-<section class="testimonials">
-    <h2>Trusted by Global Brands</h2>
-    <div class="testimonial-grid">
-        <blockquote>
-            <img src="{{ url_for('static', filename='icons/quote.svg') }}" alt="Quote Icon">
-            <p>"Impressive ethical standards and product quality. Our go-to partner for sustainable yarn solutions."</p>
-            <footer>— Emma Johnson, Sustainability Lead, Global Apparel Co.</footer>
-        </blockquote>
-        <blockquote>
-            <img src="{{ url_for('static', filename='icons/quote.svg') }}" alt="Quote Icon">
-            <p>"Transparent, reliable, and consistently exceeding expectations. A truly outstanding textile supplier."</p>
-            <footer>— David Lee, Procurement Manager, International Textiles Ltd.</footer>
-        </blockquote>
+<!-- Video Tour -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Explore Our Textile Mill</h2>
+        <video class="w-75 rounded shadow" controls>
+            <source src="{{ url_for('static', filename='videos/factory_tour.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Trusted by Global Brands</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <blockquote class="blockquote text-center">
+                    <img src="{{ url_for('static', filename='icons/quote.svg') }}" alt="Quote" width="30">
+                    <p class="mt-3">"Impressive ethical standards and product quality. Our go-to partner for sustainable yarn solutions."</p>
+                    <footer class="blockquote-footer">Emma Johnson, Sustainability Lead, Global Apparel Co.</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-5">
+                <blockquote class="blockquote text-center">
+                    <img src="{{ url_for('static', filename='icons/quote.svg') }}" alt="Quote" width="30">
+                    <p class="mt-3">"Transparent, reliable, and consistently exceeding expectations."</p>
+                    <footer class="blockquote-footer">David Lee, Procurement Manager</footer>
+                </blockquote>
+            </div>
+        </div>
     </div>
 </section>
 
 {% endblock %}
-```
-

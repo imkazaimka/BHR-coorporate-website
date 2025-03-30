@@ -1,0 +1,31 @@
+<!-- news_post.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} - Textile Mill Company{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <a href="{{ url_for('news') }}" class="btn btn-secondary mb-4">← Back to News</a>
+
+    <div class="card">
+        <div class="card-body">
+            <h2 class="mb-3">{{ post.title }}</h2>
+            <p class="text-muted"><small>{{ post.date_posted.strftime('%B %d, %Y') }}</small></p>
+            <p>{{ post.content }}</p>
+
+            <!-- Media (Photos & Videos) placeholder -->
+            <div class="media-gallery mt-4">
+                {% for image in post.images %}
+                    <img src="{{ url_for('static', filename=image) }}" class="img-fluid rounded mb-3">
+                {% endfor %}
+                {% for video in post.videos %}
+                    <video class="w-100 rounded shadow mb-3" controls>
+                        <source src="{{ url_for('static', filename=video) }}" type="video/mp4">
+                    </video>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

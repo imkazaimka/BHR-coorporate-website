@@ -1,0 +1,101 @@
+<!-- about.html -->
+{% extends "base.html" %}
+
+{% block title %}About Us - Textile Mill Company{% endblock %}
+
+{% block content %}
+
+<!-- Section 1: Company Overview & Facilities -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Who We Are & What We Do</h2>
+        <p class="lead text-center mb-5">We specialize in high-quality yarn spinning, providing exceptional textile solutions to clients globally.</p>
+        
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/factory-icon.svg') }}" alt="Factories" class="mb-3" width="60">
+                <h4>3 Factories</h4>
+                <p>Strategically located across Uzbekistan, ensuring efficient production and logistics.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/production-icon.svg') }}" alt="Production Capacity" class="mb-3" width="60">
+                <h4>50,000 Tons/Year</h4>
+                <p>Annual yarn production capacity, meeting global textile demands.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='icons/workers-icon.svg') }}" alt="Workers" class="mb-3" width="60">
+                <h4>1,200 Skilled Employees</h4>
+                <p>A dedicated workforce operating state-of-the-art spinning machinery.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/factory1.jpg') }}" class="img-fluid rounded" alt="Factory 1">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/factory2.jpg') }}" class="img-fluid rounded" alt="Factory 2">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/spinning-machines.jpg') }}" class="img-fluid rounded" alt="Spinning Machines">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Company History -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our History</h2>
+        <div class="timeline">
+            <div class="timeline-item mb-4">
+                <h4>2005</h4>
+                <p>Established our first yarn spinning mill, laying the foundation for our growth in textile manufacturing.</p>
+            </div>
+            <div class="timeline-item mb-4">
+                <h4>2010</h4>
+                <p>Opened our second manufacturing facility, significantly enhancing production capabilities.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2020</h4>
+                <p>Expanded globally, earning internationally recognized certifications like GOTS, Fairtrade, and ISO 9001.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Goals, Transparency, and Mission -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Commitment & Future Vision</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <img src="{{ url_for('static', filename='icons/mission-icon.svg') }}" alt="Mission" class="mb-3" width="50">
+                <h5>Our Mission</h5>
+                <p>To be leaders in sustainable, ethical yarn production globally.</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <img src="{{ url_for('static', filename='icons/transparency-icon.svg') }}" alt="Transparency" class="mb-3" width="50">
+                <h5>Transparency</h5>
+                <p>Clear, open practices, validated by third-party audits.</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <img src="{{ url_for('static', filename='icons/goals-icon.svg') }}" alt="Goals" class="mb-3" width="50">
+                <h5>Future Goals</h5>
+                <p>Continuous modernization, eco-friendly production, and global market expansion.</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <img src="{{ url_for('static', filename='icons/work-conditions-icon.svg') }}" alt="Work Conditions" class="mb-3" width="50">
+                <h5>Work Conditions</h5>
+                <p>Ensuring fairness, safety, and dignity for all employees.</p>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <video class="w-75 rounded shadow" controls>
+                <source src="{{ url_for('static', filename='videos/our_mission.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
