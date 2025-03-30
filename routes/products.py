@@ -11,6 +11,9 @@ products_bp = Blueprint('products', __name__, url_prefix='/products')
 def products():
     return render_template('products.html')
 
+@products_bp.route('/catalog')
+def catalog():
+    return render_template('catalog.html')
 
 @products_bp.route('/fabrics')
 def fabrics():

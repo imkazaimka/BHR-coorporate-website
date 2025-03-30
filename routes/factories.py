@@ -22,4 +22,4 @@ def bhr_bukhara():
 
 @factories_bp.route('/cotton-cleaning')
 def cotton_cleaning():
-    return render_template('cotton-cleaning.html')
+    return render_template('cotton-cleaning-facility.html')
